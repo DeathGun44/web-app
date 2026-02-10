@@ -61,6 +61,28 @@ export class SettingsComponent implements OnInit {
     'MM-dd-yy',
     'yyyy-MM-dd'
   ];
+  datetimeFormats: string[] = [
+    // All date formats with HH:mm:ss (seconds)
+    'dd MMMM yyyy HH:mm:ss',
+    'dd/MMMM/yyyy HH:mm:ss',
+    'dd-MMMM-yyyy HH:mm:ss',
+    'dd-MM-yy HH:mm:ss',
+    'MMMM-dd-yyyy HH:mm:ss',
+    'MMMM dd yyyy HH:mm:ss',
+    'MMMM/dd/yyyy HH:mm:ss',
+    'MM-dd-yy HH:mm:ss',
+    'yyyy-MM-dd HH:mm:ss',
+    // All date formats with HH:mm (no seconds)
+    'dd MMMM yyyy HH:mm',
+    'dd/MMMM/yyyy HH:mm',
+    'dd-MMMM-yyyy HH:mm',
+    'dd-MM-yy HH:mm',
+    'MMMM-dd-yyyy HH:mm',
+    'MMMM dd yyyy HH:mm',
+    'MMMM/dd/yyyy HH:mm',
+    'MM-dd-yy HH:mm',
+    'yyyy-MM-dd HH:mm'
+  ];
   /** Decimals. */
   decimals: string[] = [
     '0',
@@ -78,14 +100,14 @@ export class SettingsComponent implements OnInit {
 
   /** Language Setting */
   language = new UntypedFormControl('');
-  /** Date Format Setting */
   dateFormat = new UntypedFormControl('');
-  /** Decimals to Display Setting */
+  datetimeFormat = new UntypedFormControl('');
   decimalsToDisplay = new UntypedFormControl('');
 
   ngOnInit() {
     this.language.patchValue(this.settingsService.language);
     this.dateFormat.patchValue(this.settingsService.dateFormat);
+    this.datetimeFormat.patchValue(this.settingsService.datetimeFormat);
     this.decimalsToDisplay.patchValue(this.settingsService.decimals);
     this.buildDependencies();
   }
@@ -99,6 +121,9 @@ export class SettingsComponent implements OnInit {
     });
     this.dateFormat.valueChanges.subscribe((dateFormat: string) => {
       this.settingsService.setDateFormat(dateFormat);
+    });
+    this.datetimeFormat.valueChanges.subscribe((datetimeFormat: string) => {
+      this.settingsService.setDatetimeFormat(datetimeFormat);
     });
     this.decimalsToDisplay.valueChanges.subscribe((decimals: string) => {
       this.settingsService.setDecimalToDisplay(decimals);

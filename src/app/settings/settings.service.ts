@@ -39,6 +39,10 @@ export class SettingsService {
     localStorage.setItem('mifosXDateFormat', JSON.stringify(dateFormat));
   }
 
+  setDatetimeFormat(datetimeFormat: string) {
+    localStorage.setItem('mifosXDatetimeFormat', JSON.stringify(datetimeFormat));
+  }
+
   /**
    * Sets language setting throughout the app.
    * @param {any} language Language.
@@ -111,11 +115,26 @@ export class SettingsService {
     localStorage.setItem('mifosXServerBusinessDateEnabled', enabled);
   }
 
-  /**
-   * Returns date format setting.
-   */
   get dateFormat() {
-    return JSON.parse(localStorage.getItem('mifosXDateFormat'));
+    const userSetting = localStorage.getItem('mifosXDateFormat');
+    if (userSetting) {
+      return JSON.parse(userSetting);
+    }
+    if (environment.defaultFormatDate) {
+      return environment.defaultFormatDate;
+    }
+    return 'dd MMMM yyyy';
+  }
+
+  get datetimeFormat() {
+    const userSetting = localStorage.getItem('mifosXDatetimeFormat');
+    if (userSetting) {
+      return JSON.parse(userSetting);
+    }
+    if (environment.defaultFormatDatetime) {
+      return environment.defaultFormatDatetime;
+    }
+    return 'dd MMMM yyyy HH:mm:ss';
   }
 
   /**
