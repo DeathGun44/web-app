@@ -889,7 +889,8 @@
       "Working Capital": "Fonds de roulement",
       "DAYS": "JOURS",
       "MONTHS": "MOIS",
-      "YEARS": "ANNÉES"
+      "YEARS": "ANNÉES",
+      "Loan Creation": "Création de prêts"
     },
     "commons": {
       "50 characters long": "50 caractères",
@@ -919,6 +920,7 @@
       "greater than": "supérieur à",
       "higher than allowed": "supérieur à la limite autorisée",
       "invalid": "invalide",
+      "Invalid amount format": "Format de montant invalide",
       "is": "est",
       "Is": "Est",
       "is required": "est requis",
@@ -1768,6 +1770,8 @@
       "Delinquency Bucket": "Seau de délinquance",
       "Delinquency Classification": "Classification de la délinquance",
       "Delinquency Payment Rule": "Règle de paiement en retard",
+      "Delinquency Grace Days": "Jours de grâce pour la délinquance",
+      "Delinquency Start Type": "Type de début de délinquance",
       "Delinquency Tags": "Étiquettes de délinquance",
       "Delinquent Days": "Jours de délinquance",
       "Delivery Method": "méthode de livraison",
@@ -1803,6 +1807,7 @@
       "Disbursement On": "Décaissement le",
       "Disbursement on": "Décaissement le",
       "Discount": "Rabais",
+      "Discount must be greater than or equal to 0": "La rabais doit être supérieure ou égale à 0",
       "Display Name": "Afficher un nom",
       "Dividend Amount": "Montant du dividende",
       "Dividend Period End Date": "Date de fin de la période de dividende",
@@ -2247,6 +2252,7 @@
       "Not Available": "Indisponible",
       "Not Provided": "Non fourni",
       "Note": "Note",
+      "Note is too long": "La note est trop longue",
       "Notes": "Remarques",
       "Notes/Comments": "Remarques/Commentaires",
       "Notification": "Notification",
@@ -2260,6 +2266,7 @@
       "Number of Active Overdue Group Loans": "Nombre de prêts collectifs actifs en souffrance",
       "Number of Centers": "Nombre de centres",
       "Number of Clients": "Nombre de clients",
+      "Please enter a valid number": "Veuillez saisir un nombre valide",
       "Number of Collaterals": "Nombre de garanties",
       "Number of Days to Dormant sub-status": "Nombre de jours avant le sous-statut de dormance",
       "Number of Days to Escheat": "Nombre de jours pour éviter",
@@ -2978,6 +2985,7 @@
       "Withdrawal": "Retrait",
       "Withdrawn by Client": "Retiré par le client",
       "Write Off": "Radier",
+      "Update discount": "Mettre à jour le rabais",
       "Apply Additional Shares": "Appliquer supplémentaire",
       "Redeem Shares": "Racheter des actions",
       "Approve Additional Shares": "Approuver des partages supplémentaires",
@@ -4049,7 +4057,9 @@
       "No Closed Share Accounts Found": "Aucun compte d'actions fermé trouvé",
       "No Collateral Data Found": "Aucune donnée de garantie trouvée",
       "No Identities Found": "Aucune identité trouvée",
-      "validationSaved": "Données de validation enregistrées avec succès."
+      "validationSaved": "Données de validation enregistrées avec succès.",
+      "workingCapitalDiscountUpdated": "Le rabais du prêt de fonds de roulement a été mis à jour avec succès.",
+      "unableToUpdateDiscount": "Impossible de mettre à jour le rabais."
     }
   },
   "languages": {
